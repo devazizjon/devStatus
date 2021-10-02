@@ -1,0 +1,28 @@
+<h1>Add Books </h1>
+<form action="/add" method="POST">
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="model" type="text" class="validate" required name="model" />
+      <label for="model">Books name</label>
+      <span class="helper-text" data-error="Write Books name"></span>
+    </div>
+    <div class="input-field col s12">
+      <input
+        id="price"
+        type="number"
+        class="validate"
+        required
+        min="1"
+        name="price"
+      />
+      <label for="price">Books price</label>
+      <span class="helper-text" data-error="Write Books price"></span>
+    </div>
+    <div class="input-field col s12">
+      <input id="img" type="text" class="validate" required name="img" />
+      <label for="img">Books Url</label>
+      <span class="helper-text" data-error="Write Books Url"></span>
+    </div>
+    <button class="btn btn-primary">Send</button>
+  </div>
+</form>

@@ -1,0 +1,32 @@
+<h1>Books </h1>
+{{#if cars.length}}
+  {{! massiv }}
+    <div class="row">
+  {{#each cars}}
+      <div class="col s4 offset-12">
+        <div class="card">
+          <div class="card-image">
+            <img src="{{img}}" />
+          </div>
+          <div class="card-content">
+            <span class="card-title">{{model}}</span>
+            <p class="price">{{price}}</p>
+          </div>
+          <div class="card-action action ">
+            <a href="/cars/{{id}}" target="_blank">Show Book</a>
+            <a href="/cars/{{id}}/edit?allow=true" >Edit Book</a>
+
+              <form action="/card/add" method="POST">
+              <input type="hidden" name="id"  value="{{id}}">
+              <button class="btn btn-primary">Buy</button>
+            
+              </form>
+
+          </div>
+        </div>
+      </div>
+  {{/each}}
+    </div>
+{{else}}
+  <p>Empty</p>
+{{/if}}

@@ -1,0 +1,31 @@
+<h1>Books Basket</h1>
+<div id="card">
+{{#if cars.length}}
+<table>
+    <thead>
+        <th>Name Books</th>
+        <th>Count</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        {{#each cars}}
+        <tr>
+            <th>{{model}}</th>
+            <th>{{count}}</th>
+            <th>
+                <button type="submit"
+                class="btn btn-small js-remove"
+                data-id="{{id}}"
+                >Deleta</button>
+            </th>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<p><strong>Total price:</strong><span class="price">{{price}}</span></p>
+
+{{else}}
+<p>Not is Book</p>
+{{/if}}
+</div>
+

@@ -1,0 +1,30 @@
+<h1>Edit Book</h1>
+<form action="/cars/edit" method="POST"  >
+  <div class="row Edit">
+    <div class="input-field col s12">
+      <input id="model" type="text" class="validate" required name="model" value="{{car.model}}"/>
+      <label for="model">Car model</label>
+      <span class="helper-text" data-error="Write car model"></span>
+    </div>
+    <div class="input-field col s12">
+      <input
+        id="price"
+        type="number"
+        class="validate"
+        required
+        min="1"
+        name="price"
+        value="{{car.price}}"
+      />
+      <label for="price">Car price</label>
+      <span class="helper-text" data-error="Write car price"></span>
+    </div>
+    <div class="input-field col s12">
+      <input id="img" type="text" class="validate" required name="img" value="{{car.img}}" />
+      <label for="img">Car img</label>
+      <span class="helper-text" data-error="Write car img"></span>
+    </div>
+    <input type="hidden" name="id"  value="{{car.id}}">
+    <button class="btn btn-primary">Send</button>
+  </div>
+</form>
